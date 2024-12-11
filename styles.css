@@ -64,10 +64,22 @@ body {
   text-decoration: none;
   padding: 13px 25px;
   border-radius: 1000px;
+  transition: background-color .3s ease-out, border .3s ease-out, color .3s ease-out;
+}
+
+.our-btn:hover {
+  background-color: #2E40E2;
+  border: 2px solid #2E40E2;
 }
 
 .our-btn--outline {
   background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.our-btn--outline:hover {
+  background-color: #fff;
+  color: #475AFF;
   border: 2px solid #fff;
 }
 
@@ -170,7 +182,7 @@ body {
 
 .list-of-pets {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   column-gap: 34px;
   row-gap: 16px;
 }
@@ -178,10 +190,11 @@ body {
 .pet-card {
   overflow: hidden;
   display: grid;
+  /* @TODO adjust the min width of the column to around 120px if needed  */
   grid-template-columns: 165px 1fr;
   border-radius: 20px;
   border: 1px solid #F3F3F3;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .08)
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .08);
 }
 
 .pet-card-photo {
@@ -261,3 +274,25 @@ body {
     margin-bottom: 129px;
   }
 }
+
+/* @media screen and (max-width: 438px) {
+  .list-of-pets {
+    grid-template-columns: 1fr;
+    row-gap: 23px
+  }
+
+  .pet-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pet-card-photo img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .pet-card-text {
+    grid-column: 1;
+    padding: 18px 16px;
+  }
+} */
