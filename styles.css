@@ -1,3 +1,9 @@
+/* To prevent page from jumping to top when refreshing */
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
 body,
 html,
 h1 {
@@ -154,6 +160,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 34px;
+  row-gap: 28px;
 }
 
 .pet-card {
@@ -171,8 +178,10 @@ body {
 }
 
 .pet-card-photo img {
+  height: 100%;
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .pet-card-text {
@@ -194,5 +203,5 @@ body {
 .pet-age {
   color: #A2A2A2;
   font-size: .85rem;
-  /* margin: 0; */
+  margin: 0;
 }
